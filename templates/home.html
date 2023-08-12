@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+
+<div class="container mt-5">
+
+     {% for blog in blogs %}
+
+     <div class="m-2">
+          <div>
+               <h3>{{ blog.title }}</h3>
+               <p>{{ blog.shortDesc }}</p>
+          </div>
+          <div class="d-flex justify-content-between">
+               <div>
+                    <a href="#">Read more...</a>
+               </div>
+               <div>
+                    <label for="">{{ blog.dateTime }}</label>
+                    <b>{{ blog.userName }}</b>
+               </div>
+          </div>
+     </div>
+
+     {% endfor %}
+</div>
+
+{% include 'footer.html' %}

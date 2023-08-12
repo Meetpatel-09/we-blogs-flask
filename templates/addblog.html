@@ -1,0 +1,41 @@
+{% include 'header.html' %}
+
+<div class="container mt-5">
+     <div class="card m-auto p-5" style="max-width: 720px;">
+
+          <form class="row g-3" action="/add-blog" method="POST">
+
+               <h2>Add Blog</h2>
+               <div class="col-12">
+                    <label for="inputTitle" class="form-label">Title</label>
+                    <input type="text" name="inputTitle" id="inputTitle" class="form-control">
+               </div>
+
+               <div class="col-12">
+                    <label for="inputShortDescription" class="form-label">Short Description</label>
+                    <textarea class="form-control" name="inputShortDescription" id="inputShortDescription"
+                         rows="3"></textarea>
+               </div>
+
+               <div class="col-12">
+                    <label for="inputFullDescription" class="form-label">Full Description</label>
+                    <textarea class="form-control" name="inputFullDescription" id="inputFullDescription"
+                         rows="5"></textarea>
+               </div>
+
+               <div class="col-12">
+                    <label for="inputImage" class="form-label">Image</label>
+                    <input type="file" name="inputImage" id="inputImage" class="form-control">
+               </div>
+
+               <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+               </div>
+
+          </form>
+
+
+     </div>
+</div>
+
+{% include 'footer.html' %}

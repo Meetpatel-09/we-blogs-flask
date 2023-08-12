@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+
+<div class="container mt-5">
+
+     <div class="card p-5" style="margin: auto auto; max-width: 720px;">
+
+          <form class="row g-3" method="POST" action="/register">
+               <h3>Registration Form</h3>
+
+               <div class="col-md-6">
+                    <label for="inputFName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="inputFName" id="inputFName" required>
+               </div>
+
+               <div class="col-md-6">
+                    <label for="inputLName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="inputLName" id="inputLName" required>
+               </div>
+
+               <div class="col-md-6">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="inputEmail" id="inputEmail" required>
+               </div>
+               <div class="col-md-6">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="inputPassword" id="inputPassword" required>
+               </div>
+
+               <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Register</button>
+               </div>
+          </form>
+
+     </div>
+
+</div>
+
+{% include 'footer.html' %}

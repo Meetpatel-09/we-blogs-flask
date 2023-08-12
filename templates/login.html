@@ -1,0 +1,40 @@
+{% include 'header.html' %}
+
+<div class="container mt-5">
+
+     <div class="card p-5" style="margin: auto auto; max-width: 720px;">
+
+          <form class="row g-3" method="POST" action="/login">
+               <h3>Login Form</h3>
+
+               <div class="col-12">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="inputEmail" id="inputEmail" required>
+               </div>
+               <div class="col-12">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="inputPassword" id="inputPassword" required>
+               </div>
+
+               <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+               </div>
+          </form>
+
+     </div>
+
+</div>
+{% if message: %}
+{% if message == "1" %}
+<script>
+     alert("Invalid Passord")
+</script>
+{% endif %}
+{% if message == "2" %}
+<script>
+     alert("Account Not Found")
+</script>
+{% endif %}
+{% endif %}
+
+{% include 'footer.html' %}
